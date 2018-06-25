@@ -18,12 +18,13 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-  matches = /[a-zA-Z]/.scan(text)
+  matches = /[[:alpha:]]/.scan(text)
   matches.length === 5
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+  first_char = /[[:upper:]]/.match(text[0])
+  ends = /[[:punct:]]/match(text[-1])
 end
 
 def valid_phone_number?(phone)
