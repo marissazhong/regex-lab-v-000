@@ -17,7 +17,7 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   match = /\A[A-Z]&&[[:punct:]]\z/.match(text)
-  if first_char === nil || ends_with === nil
+  if match == nil
     FALSE
   else
     TRUE
