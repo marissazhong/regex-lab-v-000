@@ -8,13 +8,7 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  start_match = /\Aun/.match(text)
-  end_match = /\zing/.match(text)
-  if start_match === nil || end_match === nil
-    FALSE
-  else
-    TRUE
-  end
+  matches = text.scan(/\Aun\zing/)
 end
 
 def words_five_letters_long(text)
