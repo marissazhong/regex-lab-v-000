@@ -1,5 +1,5 @@
 def starts_with_a_vowel?(word)
-  match = /[aeiouAEIOU]/.match(word[0])
+  match = /\A[aeiouAEIOU]/.match(word)
   if match === nil
     FALSE
   else
@@ -16,8 +16,7 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  first_char = /\A[[:upper:]]/.match(text)
-  ends_with = /\z[[:punct:]]/.match(text)
+  match = //.match(word)
   if first_char === nil || ends_with === nil
     FALSE
   else
