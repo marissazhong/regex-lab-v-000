@@ -24,7 +24,12 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   first_char = /[[:upper:]]/.match(text[0])
-  ends = /[[:punct:]]/match(text[-1])
+  ends_with = /[[:punct:]]/match(text[-1])
+  if first_char === nil || ends_with === nil
+    FALSE
+  else
+    TRUE
+  end
 end
 
 def valid_phone_number?(phone)
