@@ -10,6 +10,11 @@ end
 def words_starting_with_un_and_ending_with_ing(text)
   start_match = /un/.match(word[0:1])
   end_match = /ing/.match(word[-3:])
+  if start_match === nil || end_match === nil
+    FALSE
+  else
+    TRUE
+  end
 end
 
 def words_five_letters_long(text)
